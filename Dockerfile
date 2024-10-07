@@ -1,0 +1,7 @@
+FROM ubuntu 
+#LABEL key="VK67220"
+RUN apt-get update
+RUN apt-get install -y python3
+RUN mkdir /app
+WORKDIR /app
+COPY ./python/* .
