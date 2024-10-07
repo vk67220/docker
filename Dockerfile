@@ -1,7 +1,4 @@
-FROM ubuntu 
-#LABEL key="VK67220"
+FROM ubuntu
+MAINTAINER VK67220
 RUN apt-get update
-RUN apt-get install -y python3
-RUN mkdir /app
-WORKDIR /app
-COPY ./python/* .
+RUN apt-get install -y git
