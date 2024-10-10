@@ -1,3 +1,4 @@
 FROM ubuntu:22.04
 RUN apt-get update
-CMD [ "echo", "this is my first container"]
+ENTRYPOINT [ "echo" ]
+CMD [ "this is my first container"]
