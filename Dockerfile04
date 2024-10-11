@@ -1,0 +1,18 @@
+# Use official Tomcat as base image
+FROM tomcat:9.0
+
+# Set the environment variable for Tomcat
+ENV CATALINA_HOME /usr/local/tomcat
+
+# Set the working directory
+WORKDIR $CATALINA_HOME
+
+# Copy the WAR file into the webapps directory
+# Assuming your WAR file is named app.war
+COPY mahalogin.war $CATALINA_HOME/webapps/
+
+# Expose port 8080 for Tomcat
+EXPOSE 8080
+
+# Start Tomcat server
+CMD ["catalina.sh", "run"]
