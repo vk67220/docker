@@ -9,7 +9,7 @@ WORKDIR $CATALINA_HOME
 
 # Copy the WAR file into the webapps directory
 # Assuming your WAR file is named app.war
-COPY mahalogin.war $CATALINA_HOME/webapps/
+COPY mahaLogin-2.0.war $CATALINA_HOME/webapps/
 
 # Expose port 8080 for Tomcat
 EXPOSE 8080
